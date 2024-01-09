@@ -3,6 +3,7 @@ import { Metadata, type Viewport } from "next"
 import { ScreenSizeIndicator } from "@/components/ScreenSizeIndicator"
 
 import { siteConfig } from "@/config/config"
+import { locales } from "@/constants/locales"
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/providers/ThemeProvider"
 import { fontCalSans, fontMono, fontSans } from "@/styles/fonts"
@@ -59,12 +60,18 @@ export const metadata: Metadata = {
 
 interface RootLayoutProps {
 	children: React.ReactNode
+	params: {
+		locale: string
+	}
 }
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({
+	children,
+	params: { locale },
+}: RootLayoutProps) {
 	return (
 		<>
-			<html lang="en" suppressHydrationWarning>
+			<html lang={locale} suppressHydrationWarning>
 				<head />
 				<body
 					className={cn(
@@ -86,4 +93,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
 			</html>
 		</>
 	)
+}
+
+export function generateStaticParams() {
+	return locales.map((locale) => ({ locale }))
 }
