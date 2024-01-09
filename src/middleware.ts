@@ -3,10 +3,9 @@ import createMiddleware from "next-intl/middleware"
 import { defaultLocale, locales } from "@/constants/locales"
 
 export default createMiddleware({
-	// A list of all locales that are supported
 	locales,
-
-	// Used when no locale matches
+	localePrefix: "never",
+	localeDetection: true,
 	defaultLocale,
 })
 
