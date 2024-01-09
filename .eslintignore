@@ -1,0 +1,11 @@
+dist/*
+.cache
+public
+node_modules
+*.esm.js
+.next
+*.config.js
+*.config.ts
+*.config.cjs
+
+

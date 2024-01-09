@@ -1,0 +1,24 @@
+{
+	"emeraldwalk.runonsave": {
+		"commands": [
+			{
+				// If you have your CSS file somewhere else, you have to specify the
+				// correct path here.
+				// "match": "./src/styles/global-edit.css",
+				"match": "\\.css$",
+				"cmd": "pnpm tw:fix"
+			}
+		]
+	},
+
+	// esconder múltiplos arquivos de configuração
+	"explorer.fileNesting.enabled": true,
+	"explorer.fileNesting.patterns": {
+		"package.json": ".eslint*, prettier*, tsconfig*, vite*, pnpm-lock*, bun.lockb, nest*, *.d.ts, .npmrc, .editorconfig, renovate.json",
+		"tailwind.config.ts": "tailwind.config*, postcss.config*",
+		".gitignore": ".gitignore, .eslintignore, .prettierignore, .stylelintignore, .gitkeep, .DS_Store, .keep",
+		".env.local": ".env*",
+		".env": ".env*",
+		"fix-tailwind-vars.js": "build-globals-edit-css.js"
+	}
+}
