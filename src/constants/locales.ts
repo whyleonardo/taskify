@@ -1,3 +1,3 @@
-export const locales = ["en", "br"]
+export const locales = ["en", "br", "es"]
 
 export const defaultLocale = "br"

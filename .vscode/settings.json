@@ -20,5 +20,9 @@
 		".env.local": ".env*",
 		".env": ".env*",
 		"fix-tailwind-vars.js": "build-globals-edit-css.js"
-	}
+	},
+	"i18n-ally.localesPaths": ["messages"],
+	// "i18n-ally.keystyle": "nested",
+	"i18n-ally.sourceLanguage": "br",
+	"i18n-ally.keystyle": "flat"
 }
