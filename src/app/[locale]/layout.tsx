@@ -79,11 +79,7 @@ const RootLayout = ({ children, params: { locale } }: RootLayoutProps) => {
 					)}
 				>
 					<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-						<div className="relative flex min-h-dvh flex-col">
-							<div className="absolute inset-0 -z-20 min-h-dvh" />
-
-							<div className="flex-1">{children}</div>
-						</div>
+						{children}
 					</ThemeProvider>
 					<ScreenSizeIndicator />
 				</body>
