@@ -13,17 +13,17 @@
 		--popover: hsl(0 0% 100%); /* white */
 		--popover-foreground: hsl(20 15% 5%); /* stone-950 */
 
-		--primary: hsl(336 70% 31%); /* pink-100 */
-		--primary-foreground: hsl(326 78% 95%); /* pink-900 */
+		--primary: hsl(335, 78%, 42%); /* pink-700 */
+		--primary-foreground: hsl(326 78% 95%); /* pink-100 */
 
-		--secondary: hsl(264 68% 35%); /* violet-100 */
-		--secondary-foreground: hsl(252 92% 96%); /* violet-900 */
+		--secondary: hsl(295, 72%, 40%); /* fuchsia-700 */
+		--secondary-foreground: hsl(287, 100%, 95%); /* fuchsia-100 */
 
 		--muted: hsl(60 5% 96%); /* stone-100 */
 		--muted-foreground: hsl(25 6% 45%); /* stone-500 */
 
 		--accent: hsl(48 97% 89%); /* amber-100 */
-		--accent-foreground: hsl(22 78% 27%); /* amber-900 */
+		--accent-foreground: hsl(26, 90%, 37%); /* amber-700 */
 
 		--destructive: hsl(0 85% 61%); /* red-500 */
 		--destructive-foreground: hsl(60 10% 98%); /* stone-50 */
@@ -32,7 +32,7 @@
 
 		--input: hsl(20 6% 90%); /* stone-200 */
 
-		--ring: hsl(263 84% 58%); /* violet-600 */
+		--ring: hsl(333, 71%, 51%); /* pink-600 */
 
 		--radius: 0.5rem;
 	}
@@ -50,8 +50,8 @@
 		--primary: hsl(336 75% 36%); /* pink-800 */
 		--primary-foreground: hsl(328 74% 98%); /* pink-50 */
 
-		--secondary: hsl(264 70% 43%) /* violet-800 */;
-		--secondary-foreground: hsl(251 100% 98%) /* violet-50 */;
+		--secondary: hsl(295, 70%, 33%); /* fuchsia-800 */
+		--secondary-foreground: hsl(289, 100%, 98%); /* fuchsia-50 */
 
 		--muted: hsl(13 7% 16%); /* stone-800 */
 		--muted-foreground: hsl(24 6% 64%); /* stone-400 */
@@ -66,6 +66,6 @@
 
 		--input: hsl(13 7% 16%); /* stone-800 */
 
-		--ring: hsl(263 84% 58%); /* violet-600 */
+		--ring: hsl(333, 71%, 51%); /* pink-600 */
 	}
 }
