@@ -75,15 +75,15 @@ export default function RootLayout({
 				<head />
 				<body
 					className={cn(
-						"min-h-screen bg-background font-sans antialiased",
+						"min-h-dvh bg-background font-sans antialiased",
 						fontSans,
 						fontMono,
 						fontCalSans,
 					)}
 				>
 					<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-						<div className="relative flex min-h-screen flex-col">
-							<div className="absolute inset-0 -z-20 min-h-screen" />
+						<div className="relative flex min-h-dvh flex-col">
+							<div className="absolute inset-0 -z-20 min-h-dvh" />
 
 							<div className="flex-1">{children}</div>
 						</div>
