@@ -65,10 +65,7 @@ interface RootLayoutProps {
 	}
 }
 
-export default function RootLayout({
-	children,
-	params: { locale },
-}: RootLayoutProps) {
+const RootLayout = ({ children, params: { locale } }: RootLayoutProps) => {
 	return (
 		<>
 			<html lang={locale} suppressHydrationWarning>
@@ -98,3 +95,5 @@ export default function RootLayout({
 export function generateStaticParams() {
 	return locales.map((locale) => ({ locale }))
 }
+
+export default RootLayout
