@@ -1,0 +1,46 @@
+import { getTranslations } from "next-intl/server"
+
+import { Icons } from "@/components/icons"
+import { Button } from "@/components/ui/button"
+
+import { env } from "@/lib/env.mjs"
+import { Link } from "@/lib/navigation"
+
+const MarketingPage = async () => {
+	const translate = await getTranslations("marketing")
+
+	return (
+		<div className="flex h-full items-center justify-center bg-neutral-200/50 dark:bg-background">
+			<div className="container flex flex-col items-center">
+				<span className="text-md dark:text--foreground mb-2 flex w-fit items-center gap-2 rounded-full bg-accent p-4 text-center font-poppins font-semibold uppercase tracking-tighter text-accent-foreground shadow-sm dark:bg-muted dark:text-accent">
+					<Icons.medal /> The First Way to Manage Your Tasks
+				</span>
+
+				<div className="my-4 flex flex-col items-center space-y-4 font-calSans">
+					<h1 className="text text-center text-6xl md:text-6xl">
+						{env.APP_NAME} helps team move
+					</h1>
+
+					<span className="rounded-md bg-gradient-to-r from-fuchsia-600 to-pink-600 px-4 pb-4 pt-2 text-6xl text-white md:text-6xl">
+						work forward.
+					</span>
+				</div>
+
+				<p className="mx-auto mt-2 max-w-sm text-center text-base text-neutral-400 md:max-w-2xl md:text-xl">
+					Collaborate, manage projects, and reach new productivity peaks. From
+					high rises to the home office, the way your team works is unique -
+					accomplish it all with Taskify.
+				</p>
+
+				<Button
+					size="lg"
+					className="mt-6 bg-foreground text-background hover:bg-foreground/90"
+				>
+					<Link href="/sign-up">{translate("start-now-button")}</Link>
+				</Button>
+			</div>
+		</div>
+	)
+}
+
+export default MarketingPage
