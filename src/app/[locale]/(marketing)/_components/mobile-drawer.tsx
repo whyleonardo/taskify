@@ -11,7 +11,7 @@ export const MobileDrawer = () => {
 	return (
 		<Sheet>
 			<SheetTrigger className="md:hidden">
-				<Icons.menu className="text-white" />
+				<Icons.menu className="text-foreground" />
 			</SheetTrigger>
 			<SheetContent>
 				<SheetHeader className="flex items-start">

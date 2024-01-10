@@ -12,24 +12,24 @@ const MarketingPage = async () => {
 	return (
 		<div className="flex h-full items-center justify-center bg-neutral-200/50 dark:bg-background">
 			<div className="container flex flex-col items-center">
-				<span className="text-md dark:text--foreground mb-2 flex w-fit items-center gap-2 rounded-full bg-accent p-4 text-center font-poppins font-semibold uppercase tracking-tighter text-accent-foreground shadow-sm dark:bg-muted dark:text-accent">
-					<Icons.medal /> The First Way to Manage Your Tasks
+				<span className="mb-2 flex w-fit items-center gap-2 rounded-full bg-accent p-2 text-center font-poppins text-sm font-semibold uppercase tracking-tighter text-accent-foreground shadow-sm md:p-4 md:text-lg dark:bg-muted dark:text-accent">
+					<Icons.medal /> The Best to Manage Your Tasks
 				</span>
 
 				<div className="my-4 flex flex-col items-center space-y-4 font-calSans">
-					<h1 className="text text-center text-6xl md:text-6xl">
+					<h1 className="text text-center text-4xl md:text-6xl">
 						{env.APP_NAME} helps team move
 					</h1>
 
-					<span className="rounded-md bg-gradient-to-r from-fuchsia-600 to-pink-600 px-4 pb-4 pt-2 text-6xl text-white md:text-6xl">
+					<span className="rounded-md bg-gradient-to-r from-fuchsia-600 to-pink-600 px-4 pb-4 pt-2 text-4xl text-white md:text-6xl">
 						work forward.
 					</span>
 				</div>
 
-				<p className="mx-auto mt-2 max-w-sm text-center text-base text-neutral-400 md:max-w-2xl md:text-xl">
+				<p className="mx-auto mt-2 max-w-sm text-center text-sm text-foreground/30 md:max-w-2xl md:text-xl">
 					Collaborate, manage projects, and reach new productivity peaks. From
 					high rises to the home office, the way your team works is unique -
-					accomplish it all with Taskify.
+					accomplish it all with {env.APP_NAME}.
 				</p>
 
 				<Button

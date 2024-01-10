@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server"
 
+import { ThemeToggle } from "@/components/buttons/ThemeToggle"
 import { LocaleFlagSwitcher } from "@/components/locale-flag-switcher"
 
 import { Link } from "@/lib/navigation"
@@ -12,15 +13,20 @@ export const MarketingFooter = async () => {
 			<div className="container flex items-center justify-between">
 				<LocaleFlagSwitcher className="!h-6 !w-6" />
 
-				<nav className="flex justify-between gap-2 md:w-fit md:justify-normal">
+				<div className="flex items-center justify-between gap-2 md:w-fit md:justify-normal">
 					<span className="text-xs">
 						{translate("built")}
 						&nbsp;
-						<Link href="https://github.com/whyleonardo" className="underline">
+						<Link
+							href="https://github.com/whyleonardo"
+							className="underline transition-all hover:text-foreground/70"
+						>
 							whyleonardo
 						</Link>
 					</span>
-				</nav>
+
+					<ThemeToggle />
+				</div>
 			</div>
 		</footer>
 	)
