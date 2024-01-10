@@ -11,7 +11,7 @@ export const MarketingNavbar = async () => {
 	const translate = await getTranslations("marketing")
 
 	return (
-		<header className="flex h-14 w-full py-2 shadow">
+		<header className="flex h-14 w-full border py-2 shadow-lg dark:border-none">
 			<div className="container flex items-center justify-between">
 				<Logo />
 

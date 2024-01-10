@@ -26,19 +26,19 @@ export const MobileSheet = async () => {
 
 				<div className="mt-8 flex flex-col gap-8">
 					<Link
-						className="flex items-center gap-1 text-xl hover:text-foreground/70 hover:underline	"
+						className="group flex items-center gap-1 text-xl hover:text-foreground/70 hover:underline"
 						href="/sign-in"
 					>
 						{translate("login-button")}
-						<Icons.chevronRight />
+						<Icons.chevronRight className="transition group-hover:translate-x-2" />
 					</Link>
 
 					<Link
-						className="flex items-center gap-1 text-xl hover:text-foreground/70 hover:underline	"
+						className="group flex items-center gap-1 text-xl hover:text-foreground/70 hover:underline"
 						href="/sign-up"
 					>
 						{translate("sign-up-button")}
-						<Icons.chevronRight />
+						<Icons.chevronRight className="transition group-hover:translate-x-2" />
 					</Link>
 				</div>
 			</SheetContent>

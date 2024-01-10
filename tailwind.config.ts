@@ -101,7 +101,7 @@ export default {
 			},
 			backgroundImage: {
 				"radial-gradient":
-					"radial-gradient(closest-side,transparent 0%, hsl(var(--background)) 120%);",
+					"radial-gradient(ellipse at center, var(--tw-gradient-stops))",
 			},
 			animation: {
 				"accordion-down": "accordion-down 0.2s ease-out",
