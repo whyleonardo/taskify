@@ -1,8 +1,12 @@
 {
 	"marketing": {
 		"login-button": "Login",
-		"sign-up-button": "Get Account for free",
-		"start-now-button": "Start Now",
-		"built": "Built by"
+		"sign-up-button": "Create Free Account",
+		"start-now-button": "Start now",
+		"built": "Built by",
+		"medal": "The Best to Manage Your Tasks",
+		"helps-team": "helps your team move",
+		"work-forward": "work forward",
+		"description": "Collaborate, manage projects, and reach new productiv peaks. From high rises to the home office, the way your team works is unique - accomplish it all with"
 	}
 }
