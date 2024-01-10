@@ -34,7 +34,7 @@ const MarketingPage = async () => {
 
 				<Button
 					size="lg"
-					className="mt-6 bg-foreground text-background hover:bg-foreground/90"
+					className="relative z-50 mt-6 bg-foreground text-background hover:bg-foreground/90"
 				>
 					<Link href="/sign-up">{translate("start-now-button")}</Link>
 				</Button>
