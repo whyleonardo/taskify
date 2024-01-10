@@ -1,5 +1,8 @@
 {
-	"Index": {
-		"title": "Hello World!"
+	"marketing": {
+		"login-button": "Login",
+		"sign-up-button": "Get Account for free",
+		"start-now-button": "Start Now",
+		"built": "Built for"
 	}
 }

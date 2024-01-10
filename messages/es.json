@@ -1,5 +1,8 @@
 {
-	"Index": {
-		"title": "Hola Mundo"
+	"marketing": {
+		"login-button": "Login",
+		"sign-up-button": "Sign up",
+		"start-now-button": "Começar Agora",
+		"built": "Construyedo por"
 	}
 }

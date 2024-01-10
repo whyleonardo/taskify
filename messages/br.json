@@ -1,5 +1,8 @@
 {
-  "Index": {
-    "title": "Olá Mundo"
-  }
+	"marketing": {
+		"login-button": "Entrar",
+		"sign-up-button": "Criar Conta Gratuita",
+		"start-now-button": "Começar Agora",
+		"built": "Contruído por"
+	}
 }
