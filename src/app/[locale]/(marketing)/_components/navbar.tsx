@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server"
 import { Logo } from "@/components/logo"
 import { Button } from "@/components/ui/button"
 
-import { MobileDrawer } from "./mobile-drawer"
+import { MobileSheet } from "./mobile-sheet"
 
 import { Link } from "@/lib/navigation"
 
@@ -26,10 +26,9 @@ export const MarketingNavbar = async () => {
 					>
 						<Link href="/sign-up">{translate("sign-up-button")}</Link>
 					</Button>
-					{/* <ThemeToggle /> */}
 				</nav>
 
-				<MobileDrawer />
+				<MobileSheet />
 			</div>
 		</header>
 	)
