@@ -6,7 +6,7 @@ import { siteConfig } from "@/config/config"
 import { locales } from "@/constants/locales"
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/providers/ThemeProvider"
-import { fontCalSans, fontMono, fontSans } from "@/styles/fonts"
+import { fontCalSans, fontMono, fontPoppins, fontSans } from "@/styles/fonts"
 
 import "@/styles/global.css"
 import "@/styles/base.css"
@@ -72,10 +72,11 @@ const RootLayout = ({ children, params: { locale } }: RootLayoutProps) => {
 				<head />
 				<body
 					className={cn(
-						"min-h-dvh bg-background font-sans antialiased",
+						"bg-background min-h-dvh font-sans antialiased",
 						fontSans,
 						fontMono,
 						fontCalSans,
+						fontPoppins,
 					)}
 				>
 					<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
