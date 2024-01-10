@@ -4,6 +4,7 @@ import {
 	SunMedium,
 	Twitter,
 	Menu,
+	ChevronRight,
 	Medal,
 	type IconNode as LucideIcon,
 } from "lucide-react"
@@ -12,6 +13,7 @@ export type Icon = LucideIcon
 
 export const Icons = {
 	sun: SunMedium,
+	chevronRight: ChevronRight,
 	moon: Moon,
 	menu: Menu,
 	medal: Medal,
