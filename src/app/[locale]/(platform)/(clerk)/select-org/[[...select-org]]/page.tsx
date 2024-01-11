@@ -1,7 +1,7 @@
 import { OrganizationList } from "@clerk/nextjs"
 
 const CreateClerkOrganizationPage = () => {
-	return <OrganizationList />
+	return <OrganizationList hidePersonal />
 }
 
 export default CreateClerkOrganizationPage
