@@ -7,6 +7,7 @@ import { locales } from "@/constants/locales"
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/providers/ThemeProvider"
 import { fontCalSans, fontMono, fontPoppins, fontSans } from "@/styles/fonts"
+import { ClerkProvider } from "@clerk/nextjs"
 
 import "@/styles/global.css"
 import "@/styles/base.css"
@@ -67,7 +68,7 @@ interface RootLayoutProps {
 
 const RootLayout = ({ children, params: { locale } }: RootLayoutProps) => {
 	return (
-		<>
+		<ClerkProvider>
 			<html lang={locale} suppressHydrationWarning>
 				<head />
 				<body
@@ -85,7 +86,7 @@ const RootLayout = ({ children, params: { locale } }: RootLayoutProps) => {
 					<ScreenSizeIndicator />
 				</body>
 			</html>
-		</>
+		</ClerkProvider>
 	)
 }
 

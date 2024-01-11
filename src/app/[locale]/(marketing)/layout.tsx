@@ -1,20 +1,23 @@
-import { MarketingFooter } from "./_components/footer"
-import { MarketingNavbar } from "./_components/navbar"
+"use client"
+
+import { useRouter } from "next/navigation"
+import { usePathname } from "next/navigation"
+
+import { useAuth } from "@clerk/nextjs"
 
 interface MarketingLayoutProps {
 	children: React.ReactNode
 }
 
 const MarketingLayout = ({ children }: MarketingLayoutProps) => {
-	return (
-		<div className="h-dvh">
-			<MarketingNavbar />
+	const { userId } = useAuth()
+	const { push } = useRouter()
+	const pathname = usePathname()
 
-			<main className="h-[calc(100%-7.5rem)] w-full">{children}</main>
-
-			<MarketingFooter />
-		</div>
-	)
+	if (userId && pathname.match("/")) {
+		push("/app")
+	}
+	return <div className="h-dvh">{children}</div>
 }
 
 export default MarketingLayout
