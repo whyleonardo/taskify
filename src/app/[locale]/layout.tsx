@@ -7,10 +7,10 @@ import { locales } from "@/constants/locales"
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/providers/ThemeProvider"
 import { fontCalSans, fontMono, fontPoppins, fontSans } from "@/styles/fonts"
-import { ClerkProvider } from "@clerk/nextjs"
 
 import "@/styles/global.css"
 import "@/styles/base.css"
+import { dark } from "@clerk/themes"
 
 export const viewport: Viewport = {
 	themeColor: [
@@ -68,25 +68,23 @@ interface RootLayoutProps {
 
 const RootLayout = ({ children, params: { locale } }: RootLayoutProps) => {
 	return (
-		<ClerkProvider>
-			<html lang={locale} suppressHydrationWarning>
-				<head />
-				<body
-					className={cn(
-						"bg-background min-h-dvh font-sans antialiased",
-						fontSans,
-						fontMono,
-						fontCalSans,
-						fontPoppins,
-					)}
-				>
-					<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-						{children}
-					</ThemeProvider>
-					<ScreenSizeIndicator />
-				</body>
-			</html>
-		</ClerkProvider>
+		<html lang={locale} suppressHydrationWarning>
+			<head />
+			<body
+				className={cn(
+					"bg-background min-h-dvh font-sans antialiased",
+					fontSans,
+					fontMono,
+					fontCalSans,
+					fontPoppins,
+				)}
+			>
+				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+					{children}
+				</ThemeProvider>
+				<ScreenSizeIndicator />
+			</body>
+		</html>
 	)
 }
 
