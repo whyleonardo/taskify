@@ -8,6 +8,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
 	return (
 		<div className="h-full">
 			<DashboardNavbar />
+
 			{children}
 		</div>
 	)
