@@ -9,7 +9,7 @@ export const DashboardNavbar = async () => {
 	const user = await currentUser()
 
 	return (
-		<header className="sticky top-0 z-50 flex h-14 w-full items-center bg-foreground/5 px-4 shadow">
+		<header className="sticky top-0 z-50 flex h-14 w-full items-center bg-muted px-4 shadow">
 			<div className="flex w-full items-center gap-x-2">
 				<Logo className="mr-2 hidden md:flex" />
 
