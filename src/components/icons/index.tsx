@@ -4,6 +4,7 @@ import {
 	SunMedium,
 	Twitter,
 	Menu,
+	Plus,
 	ChevronRight,
 	Medal,
 	type IconNode as LucideIcon,
@@ -16,6 +17,7 @@ export const Icons = {
 	chevronRight: ChevronRight,
 	moon: Moon,
 	menu: Menu,
+	plus: Plus,
 	medal: Medal,
 	twitter: Twitter,
 	logo: (props: LucideProps) => (
