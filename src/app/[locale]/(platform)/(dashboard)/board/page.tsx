@@ -1,5 +1,3 @@
-"use client"
-
 import { LocaleFlagSwitcher } from "@/components/locale-flag-switcher"
 
 const DashboardPage = () => {
