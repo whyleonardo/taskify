@@ -22,8 +22,8 @@
 		--muted: hsl(0 0% 97%); /* neutral-100 */
 		--muted-foreground: hsl(0 0% 46%); /* neutral-500 */
 
-		--accent: hsl(48 97% 89%); /* amber-100 */
-		--accent-foreground: hsl(26 90% 37%); /* amber-700 */
+		--accent: hsl(48 100% 96%); /* amber-50 */
+		--accent-foreground: hsl(38 92% 50%); /* amber-500 */
 
 		--destructive: hsl(0 85% 61%); /* red-500 */
 		--destructive-foreground: hsl(0 0% 99%); /* neutral-50 */
@@ -56,8 +56,8 @@
 		--muted: hsl(0 0% 15%); /* neutral-800 */
 		--muted-foreground: hsl(0 0% 64%); /* neutral-400 */
 
-		--accent: hsl(48 97% 89%); /* amber-100 */
-		--accent-foreground: hsl(26 90% 37%); /* amber-700 */
+		--accent: hsl(48 100% 96%); /* amber-50 */
+		--accent-foreground: hsl(38 92% 50%); /* amber-500 */
 
 		--destructive: hsl(0 63% 31%); /* red-900 */
 		--destructive-foreground: hsl(0 0% 99%); /* neutral-50 */
