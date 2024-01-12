@@ -25,7 +25,7 @@ const MarketingPage = async () => {
 
 					<div className="my-4 flex flex-col items-center space-y-4 font-calSans ">
 						<h1 className="text text-balance text-center text-4xl md:text-6xl">
-							{env.APP_NAME} {translate("helps-team")}
+							{env.NEXT_PUBLIC_APP_NAME} {translate("helps-team")}
 						</h1>
 
 						<span className="rounded-md bg-gradient-to-r from-fuchsia-600 to-pink-600 px-4 pb-4 pt-2 text-4xl text-white md:text-6xl">
@@ -34,7 +34,7 @@ const MarketingPage = async () => {
 					</div>
 
 					<p className="mx-auto mt-2 max-w-md text-balance text-center text-sm text-foreground/50 md:max-w-2xl md:text-xl">
-						{translate("description")} {env.APP_NAME}.
+						{translate("description")} {env.NEXT_PUBLIC_APP_NAME}.
 					</p>
 
 					<Button
