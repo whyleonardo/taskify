@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server"
+import { unstable_setRequestLocale } from "next-intl/server"
 
 import { MarketingFooter } from "./_components/footer"
 import { MarketingNavbar } from "./_components/navbar"
@@ -8,7 +9,15 @@ import { Button } from "@/components/ui/button"
 import { env } from "@/lib/env.mjs"
 import { Link } from "@/lib/navigation"
 
-const MarketingPage = async () => {
+interface MarketingPageProps {
+	params: {
+		locale: string
+	}
+}
+
+const MarketingPage = async ({ params: { locale } }: MarketingPageProps) => {
+	unstable_setRequestLocale(locale)
+
 	const translate = await getTranslations("marketing")
 
 	return (

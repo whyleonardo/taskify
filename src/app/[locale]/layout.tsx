@@ -10,6 +10,7 @@ import { fontCalSans, fontMono, fontPoppins, fontSans } from "@/styles/fonts"
 
 import "@/styles/global.css"
 import "@/styles/base.css"
+import { unstable_setRequestLocale } from "next-intl/server"
 
 export const viewport: Viewport = {
 	themeColor: [
@@ -66,6 +67,7 @@ interface RootLayoutProps {
 }
 
 const RootLayout = ({ children, params: { locale } }: RootLayoutProps) => {
+	unstable_setRequestLocale(locale)
 	return (
 		<html lang={locale} suppressHydrationWarning>
 			<head />
