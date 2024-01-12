@@ -20,32 +20,17 @@ export default authMiddleware({
 		const actualLocale = req.cookies.get("NEXT_LOCALE")?.value
 
 		if (auth.userId && auth.isPublicRoute) {
-			let path = `/${actualLocale}/select-org`
+			let path = `/${actualLocale}/board`
 
-			if (auth.orgId) {
-				path = `/${actualLocale}/app/organization/${auth.orgId}`
-			}
+			const dashboardUrl = new URL(path, req.url)
 
-			const orgSelection = new URL(path, req.url)
-
-			response.headers.set("x-middleware-rewrite", orgSelection.toString())
+			response.headers.set("x-middleware-rewrite", dashboardUrl.toString())
 
 			return response
 		}
 
 		if (!auth.userId && !auth.isPublicRoute) {
 			return redirectToSignIn({ returnBackUrl: req.url })
-		}
-
-		if (
-			auth.userId &&
-			!auth.orgId &&
-			req.nextUrl.pathname !== `${actualLocale}/select-org`
-		) {
-			const orgSelection = new URL(`${actualLocale}/select-org`, req.url)
-			response.headers.set("x-middleware-rewrite", orgSelection.toString())
-
-			return response
 		}
 	},
 
