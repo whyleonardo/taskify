@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@clerk/localizations':
+    specifier: ^1.26.13
+    version: 1.26.13(react@18.2.0)
   '@clerk/nextjs':
     specifier: ^4.29.2
     version: 4.29.2(next@14.0.4)(react-dom@18.2.0)(react@18.2.0)
@@ -95,6 +98,9 @@ dependencies:
   zod:
     specifier: ^3.22.4
     version: 3.22.4
+  zustand:
+    specifier: ^4.4.7
+    version: 4.4.7(@types/react@18.2.46)(react@18.2.0)
 
 devDependencies:
   '@radix-ui/colors':
@@ -1614,6 +1620,16 @@ packages:
       tslib: 2.4.1
     transitivePeerDependencies:
       - react
+    dev: false
+
+  /@clerk/localizations@1.26.13(react@18.2.0):
+    resolution: {integrity: sha512-YsH9WVqkZYJ3ffCP1wce3KWrQo8C3BUS5b7grOpwt/H15sK0Y3KyeS3py1QqcfMcYj+gqjcbW9Az8MpdUeP8Rg==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: '>=16'
+    dependencies:
+      '@clerk/types': 3.60.0
+      react: 18.2.0
     dev: false
 
   /@clerk/nextjs@4.29.2(next@14.0.4)(react-dom@18.2.0)(react@18.2.0):
@@ -13004,4 +13020,24 @@ packages:
 
   /zod@3.22.4:
     resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
+    dev: false
+
+  /zustand@4.4.7(@types/react@18.2.46)(react@18.2.0):
+    resolution: {integrity: sha512-QFJWJMdlETcI69paJwhSMJz7PPWjVP8Sjhclxmxmxv/RYI7ZOvR5BHX+ktH0we9gTWQMxcne8q1OY8xxz604gw==}
+    engines: {node: '>=12.7.0'}
+    peerDependencies:
+      '@types/react': '>=16.8'
+      immer: '>=9.0'
+      react: '>=16.8'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      immer:
+        optional: true
+      react:
+        optional: true
+    dependencies:
+      '@types/react': 18.2.46
+      react: 18.2.0
+      use-sync-external-store: 1.2.0(react@18.2.0)
     dev: false
