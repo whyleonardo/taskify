@@ -2,7 +2,6 @@ import { getTranslations } from "next-intl/server"
 
 import { Icons } from "@/components/icons"
 import { Logo } from "@/components/logo"
-import { buttonVariants } from "@/components/ui/button"
 import {
 	Sheet,
 	SheetContent,
