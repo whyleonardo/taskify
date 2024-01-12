@@ -8,7 +8,7 @@ interface LogoProps {
 export const Logo = ({ className }: LogoProps) => {
 	return (
 		<Link className={className} href="/">
-			{env.APP_NAME}
+			{env.NEXT_PUBLIC_APP_NAME}
 		</Link>
 	)
 }
