@@ -10,7 +10,6 @@ import { fontCalSans, fontMono, fontPoppins, fontSans } from "@/styles/fonts"
 
 import "@/styles/global.css"
 import "@/styles/base.css"
-import { dark } from "@clerk/themes"
 
 export const viewport: Viewport = {
 	themeColor: [
