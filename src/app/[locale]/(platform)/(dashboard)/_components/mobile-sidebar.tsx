@@ -11,7 +11,6 @@ import { Sheet, SheetContent } from "@/components/ui/sheet"
 import { DashboardSidebar } from "./sidebar"
 
 import { useMobileSidebar } from "@/hooks/use-mobile-sidebar"
-import { Link } from "@/lib/navigation"
 
 export const MobileSidebar = () => {
 	const pathname = usePathname()

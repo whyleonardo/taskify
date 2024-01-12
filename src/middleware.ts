@@ -1,5 +1,4 @@
 import createMiddleware from "next-intl/middleware"
-import { NextResponse } from "next/server"
 
 import { defaultLocale, locales, localePrefix } from "@/constants/locales"
 import { authMiddleware, redirectToSignIn } from "@clerk/nextjs"

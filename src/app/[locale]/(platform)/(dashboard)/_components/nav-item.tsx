@@ -25,6 +25,7 @@ interface NavItemProps {
 	isExpanded: boolean
 	isActive: boolean
 	organization: Organization
+	// eslint-disable-next-line no-unused-vars
 	onExpand: (id: string) => void
 }
 
@@ -57,7 +58,6 @@ export const NavItem = ({
 		},
 	]
 
-	const router = useRouter()
 	const pathname = usePathname()
 
 	return (
