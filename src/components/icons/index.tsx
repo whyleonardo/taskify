@@ -3,10 +3,15 @@ import {
 	Moon,
 	SunMedium,
 	Twitter,
-	Menu,
+	AlignJustify,
 	Plus,
+	ArrowLeftRight,
 	ChevronRight,
+	Activity,
+	Layout,
+	Settings,
 	Medal,
+	CreditCard,
 	type IconNode as LucideIcon,
 } from "lucide-react"
 
@@ -14,9 +19,14 @@ export type Icon = LucideIcon
 
 export const Icons = {
 	sun: SunMedium,
+	creditCard: CreditCard,
 	chevronRight: ChevronRight,
 	moon: Moon,
-	menu: Menu,
+	menu: AlignJustify,
+	layout: Layout,
+	activity: Activity,
+	settings: Settings,
+	switch: ArrowLeftRight,
 	plus: Plus,
 	medal: Medal,
 	twitter: Twitter,
