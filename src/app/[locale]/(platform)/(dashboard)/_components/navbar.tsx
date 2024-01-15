@@ -46,17 +46,7 @@ export const DashboardNavbar = async () => {
 				</div>
 
 				<div className="ml-auto">
-					<UserButton
-						afterSignOutUrl="/"
-						appearance={{
-							elements: {
-								avatarBox: {
-									height: 30,
-									width: 30,
-								},
-							},
-						}}
-					/>
+					<UserButton afterSignOutUrl="/" />
 				</div>
 			</div>
 		</header>

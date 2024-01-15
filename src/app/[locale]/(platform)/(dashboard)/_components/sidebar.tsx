@@ -64,8 +64,8 @@ export const DashboardSidebar = ({
 				<span className="pl-4">Workspaces</span>
 
 				<Button asChild type="button" variant="ghost" className="ml-auto">
-					<Link href="/select-org">
-						<Icons.switch />
+					<Link href="/create-org">
+						<Icons.plus />
 					</Link>
 				</Button>
 			</div>
