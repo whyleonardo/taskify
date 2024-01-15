@@ -6,6 +6,7 @@ import { useEffect, useState } from "react"
 import { ThemeToggle } from "@/components/buttons/ThemeToggle"
 import { Icons } from "@/components/icons"
 import { Button } from "@/components/ui/button"
+import { ScrollArea } from "@/components/ui/scroll-area"
 import { Sheet, SheetContent } from "@/components/ui/sheet"
 
 import { DashboardSidebar } from "./sidebar"
@@ -37,12 +38,13 @@ export const MobileSidebar = () => {
 			</Button>
 
 			<Sheet open={isOpen} onOpenChange={onClose}>
-				<SheetContent side="left" className="px-4 pt-16 md:hidden">
+				<SheetContent side="left" className="px-0 pt-16 md:hidden">
 					<div className="absolute left-4 top-1.5 p-0">
 						<ThemeToggle />
 					</div>
-
-					<DashboardSidebar storageKey="t-sidebar-mobile-state" />
+					<ScrollArea className="h-[calc(100vh-4.5rem)] w-full shrink-0 px-4 md:block">
+						<DashboardSidebar storageKey="t-sidebar-mobile-state" />
+					</ScrollArea>
 				</SheetContent>
 			</Sheet>
 		</>
