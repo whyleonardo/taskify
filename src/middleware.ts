@@ -40,7 +40,7 @@ export const config = {
 	// Match only internationalized pathnames
 	matcher: [
 		"/",
-		// "/(en|br|es)/:path*",
+		"/(en|br|es)/:path*",
 		"/((?!.+\\.[\\w]+$|_next).*)",
 		"/(api|trpc)(.*)",
 	],
