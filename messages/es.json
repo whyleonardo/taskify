@@ -8,5 +8,11 @@
 		"helps-team": "ayuda a tu equipo a",
 		"work-forward": "trabajar hacia adelante",
 		"description": "Colabora, gestiona proyectos y alcanza nuevos picos de productividad. Desde rascacielos hasta oficinas en casa, la forma en que trabaja su equipo es única. Llévelo todo con"
+	},
+	"form": {
+		"board-creation": {
+			"success": "Board creado com sucesso",
+			"error": "Erro ao criar board"
+		}
 	}
 }
