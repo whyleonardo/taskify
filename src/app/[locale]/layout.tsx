@@ -1,6 +1,8 @@
 import { Metadata, type Viewport } from "next"
+import { NextIntlClientProvider, useMessages } from "next-intl"
 
 import { ScreenSizeIndicator } from "@/components/ScreenSizeIndicator"
+import { Toaster } from "@/components/ui/sonner"
 
 import { siteConfig } from "@/config/config"
 import { locales } from "@/constants/locales"
@@ -10,7 +12,6 @@ import { fontCalSans, fontMono, fontPoppins, fontSans } from "@/styles/fonts"
 
 import "@/styles/global.css"
 import "@/styles/base.css"
-import { unstable_setRequestLocale } from "next-intl/server"
 
 export const viewport: Viewport = {
 	themeColor: [
@@ -67,7 +68,7 @@ interface RootLayoutProps {
 }
 
 const RootLayout = ({ children, params: { locale } }: RootLayoutProps) => {
-	unstable_setRequestLocale(locale)
+	const messages = useMessages()
 	return (
 		<html lang={locale} suppressHydrationWarning>
 			<head />
@@ -80,10 +81,13 @@ const RootLayout = ({ children, params: { locale } }: RootLayoutProps) => {
 					fontPoppins,
 				)}
 			>
-				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-					{children}
-				</ThemeProvider>
-				<ScreenSizeIndicator />
+				<NextIntlClientProvider messages={messages} locale={locale}>
+					<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+						{children}
+						<Toaster />
+					</ThemeProvider>
+					<ScreenSizeIndicator />
+				</NextIntlClientProvider>
 			</body>
 		</html>
 	)
