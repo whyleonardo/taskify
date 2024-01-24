@@ -13,12 +13,12 @@ interface LocaleSwitcherProps {
 
 export const LocaleFlagSwitcher = ({ className }: LocaleSwitcherProps) => {
 	const actualLocale = useLocale()
-	const p = usePathname()
+	const pathname = usePathname()
 	return (
 		<>
 			<div className="flex items-center gap-2">
 				{locales.map((locale) => (
-					<Link href={p} locale={locale} key={locale}>
+					<Link href={pathname} locale={locale} key={locale}>
 						<ReactCountryFlag
 							countryCode={locale === "en" ? "us" : locale}
 							lang={locale}
