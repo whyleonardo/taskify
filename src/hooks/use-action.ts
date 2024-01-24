@@ -1,7 +1,8 @@
 /* eslint-disable no-unused-vars */
 import { useState, useCallback } from "react"
 
-import { ActionState, FieldErrors } from "@/lib/create-safe-action"
+import { ActionState } from "@/types/action-state"
+import { FieldErrors } from "@/types/field-errors"
 
 type Action<TInput, TOutput> = (
 	data: TInput,
@@ -36,9 +37,7 @@ export const useAction = <TInput, TOutput>(
 					return
 				}
 
-				if (result.fieldErrors) {
-					setFieldErrors(result.fieldErrors)
-				}
+				setFieldErrors(result.fieldErrors)
 
 				if (result.error) {
 					setError(result.error)
