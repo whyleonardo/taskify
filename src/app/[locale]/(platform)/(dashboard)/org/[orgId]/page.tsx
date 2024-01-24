@@ -1,11 +1,23 @@
-interface OrganizationIdPageProps {
-	params: {
-		orgId: string
-	}
-}
+import { getTranslations } from "next-intl/server"
+import { Suspense } from "react"
 
-const OrganizationIdPage = ({ params }: OrganizationIdPageProps) => {
-	return <div>{params.orgId}</div>
+import { BoardList } from "./_components/board-list"
+import { Info } from "./_components/info"
+import { Separator } from "@/components/ui/separator"
+
+const OrganizationIdPage = async () => {
+	return (
+		<div className="mb-20 w-full">
+			<Info />
+			<Separator className="my-4" />
+
+			<div className="px-2 md:px-4">
+				<Suspense fallback={<BoardList.Skeleton />}>
+					<BoardList />
+				</Suspense>
+			</div>
+		</div>
+	)
 }
 
 export default OrganizationIdPage
