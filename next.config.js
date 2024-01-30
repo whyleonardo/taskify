@@ -14,7 +14,4 @@ module.exports = withNextIntl({
 			},
 		],
 	},
-	experimental: {
-		typedRoutes: true,
-	},
 })
