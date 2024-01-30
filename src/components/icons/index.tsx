@@ -13,6 +13,7 @@ import {
 	User2,
 	Loader2Icon,
 	HelpCircle,
+	MoreHorizontal,
 	Settings,
 	Medal,
 	XCircle,
@@ -25,6 +26,7 @@ export type Icon = LucideIcon
 
 export const Icons = {
 	sun: SunMedium,
+	more: MoreHorizontal,
 	close: X,
 	selected: Check,
 	help: HelpCircle,

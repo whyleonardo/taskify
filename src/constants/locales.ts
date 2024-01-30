@@ -1,8 +1,8 @@
-import { esES, enUS, ptBR } from "@clerk/localizations"
+import { enUS, ptBR } from "@clerk/localizations"
 
-export const locales = ["en", "br", "es"]
+export const locales = ["en", "br"]
 
-export const defaultLocale = "br"
+export const defaultLocale = "en"
 
 export const localePrefix = "never"
 
@@ -15,9 +15,6 @@ export const clerkLocale = (lang: string) => {
 			break
 		case "br":
 			locale = ptBR
-			break
-		case "es":
-			locale = esES
 			break
 	}
 
