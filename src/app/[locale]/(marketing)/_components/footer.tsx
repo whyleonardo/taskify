@@ -11,8 +11,6 @@ export const MarketingFooter = async () => {
 	return (
 		<footer className="flex h-16 w-full border-t shadow-lg">
 			<div className="container flex items-center justify-between">
-				<LocaleFlagSwitcher className="!h-6 !w-6" />
-
 				<div className="flex items-center justify-between gap-2 md:w-fit md:justify-normal">
 					<span className="text-xs">
 						{translate("built")}
