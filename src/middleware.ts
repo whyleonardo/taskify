@@ -19,11 +19,11 @@ export default authMiddleware({
 		const actualLocale = req.cookies.get("NEXT_LOCALE")?.value
 
 		if (auth.userId && auth.isPublicRoute) {
-			let path = `/${actualLocale}/board`
+			let path = `/${actualLocale}/select-org`
 
-			const dashboardUrl = new URL(path, req.url)
+			const selectOrgUrl = new URL(path, req.url)
 
-			response.headers.set("x-middleware-rewrite", dashboardUrl.toString())
+			response.headers.set("x-middleware-rewrite", selectOrgUrl.toString())
 
 			return response
 		}
@@ -40,7 +40,7 @@ export const config = {
 	// Match only internationalized pathnames
 	matcher: [
 		"/",
-		"/(en|br|es)/:path*",
+		"/(en|br)/:path*",
 		"/((?!.+\\.[\\w]+$|_next).*)",
 		"/(api|trpc)(.*)",
 	],
