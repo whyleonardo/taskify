@@ -37,7 +37,7 @@ export const DashboardNavbar = async () => {
 						afterSelectOrganizationUrl="/org/:id"
 						afterCreateOrganizationUrl="/org/:id"
 						hidePersonal
-						afterLeaveOrganizationUrl={`/${user?.username}`}
+						afterLeaveOrganizationUrl="/select-org"
 						appearance={{
 							elements: {
 								avatarBox: {
