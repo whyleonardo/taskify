@@ -77,6 +77,9 @@ dependencies:
   geist:
     specifier: ^1.2.0
     version: 1.2.0(next@14.0.4)
+  lodash:
+    specifier: ^4.17.21
+    version: 4.17.21
   lucide-react:
     specifier: 0.303.0
     version: 0.303.0(react@18.2.0)
@@ -169,6 +172,9 @@ devDependencies:
   '@testing-library/user-event':
     specifier: ^14.5.2
     version: 14.5.2(@testing-library/dom@9.3.3)
+  '@types/lodash':
+    specifier: ^4.14.202
+    version: 4.14.202
   '@types/node':
     specifier: ^20.10.6
     version: 20.10.6
