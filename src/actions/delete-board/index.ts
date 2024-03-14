@@ -24,6 +24,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 	let board
 
 	try {
+		// eslint-disable-next-line no-unused-vars
 		board = await db.board.delete({
 			where: {
 				orgId,

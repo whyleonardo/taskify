@@ -68,8 +68,7 @@ const BoardIdLayout = async ({ children, params }: BoardIdLayoutProps) => {
 			<BoardNavbar board={board} />
 			<div className="absolute inset-0 bg-black/10" />
 
-			<main className="relative h-full pt-28">Board</main>
-			{children}
+			<main className="relative h-full pt-28">{children}</main>
 		</div>
 	)
 }
