@@ -14,6 +14,7 @@ import { useEventListener } from "usehooks-ts"
 
 interface ListHeaderProps {
 	data: List
+	onAddCard: () => void
 }
 
 export const ListHeader = ({ data }: ListHeaderProps) => {
@@ -102,7 +103,7 @@ export const ListHeader = ({ data }: ListHeaderProps) => {
 				</button>
 			)}
 
-			<ListOptions onAddCard={() => {}} data={data} />
+			<ListOptions onAddCard={enableEditing} data={data} />
 		</div>
 	)
 }
