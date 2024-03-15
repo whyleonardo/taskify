@@ -1,7 +1,7 @@
 "use client"
 
 import { useParams, useRouter } from "next/navigation"
-import { ElementRef, useEffect, useRef, useState } from "react"
+import { ElementRef, useRef, useState } from "react"
 
 import { FormInput } from "@/components/form/form-input"
 import { FormSubmit } from "@/components/form/form-submit"
@@ -11,7 +11,6 @@ import { Button } from "@/components/ui/button"
 import { ListWrapper } from "./list-wrapper"
 
 import { createList } from "@/actions/create-list"
-import { CreateList } from "@/actions/create-list/schema"
 import { useAction } from "@/hooks/use-action"
 import { X } from "lucide-react"
 import { toast } from "sonner"
@@ -80,10 +79,10 @@ export const ListForm = ({}: ListFormProps) => {
 						errors={fieldErrors}
 						placeholder="Enter list title..."
 						ref={inputRef}
-						className="h-7 border-transparent px-2 py-1 text-sm font-medium transition hover:border-input focus:border-input  "
+						className="h-7 rounded-sm border-transparent px-2 py-1 text-sm font-medium transition hover:border-input focus:border-input"
 					/>
 
-					<input hidden value={params.boardId} name="boardId" />
+					<input hidden value={params.boardId} name="boardId" readOnly />
 					<div className="flex items-center gap-1">
 						<FormSubmit>Add List</FormSubmit>
 						<Button onClick={disableEditing} size="sm" variant="ghost">

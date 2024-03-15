@@ -4,6 +4,8 @@ import { ElementRef, useRef, useState } from "react"
 
 import { FormInput } from "@/components/form/form-input"
 
+import { ListOptions } from "./list-options"
+
 import { updateList } from "@/actions/update-list"
 import { useAction } from "@/hooks/use-action"
 import { List } from "@prisma/client"
@@ -99,6 +101,8 @@ export const ListHeader = ({ data }: ListHeaderProps) => {
 					{title}
 				</button>
 			)}
+
+			<ListOptions onAddCard={() => {}} data={data} />
 		</div>
 	)
 }

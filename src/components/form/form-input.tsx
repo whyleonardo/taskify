@@ -50,6 +50,7 @@ export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
 						</Label>
 					) : null}
 					<Input
+						spellCheck={false}
 						onBlur={onBlur}
 						defaultValue={defaultValue}
 						ref={ref}
