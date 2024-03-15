@@ -27,29 +27,32 @@ export const DashboardNavbar = async () => {
 					</Button>
 				</FormPopover>
 
-				<div className="ml-auto hidden items-center gap-x-2 md:flex">
-					<ThemeToggle />
-					<OrganizationSwitcher
-						afterSelectOrganizationUrl="/org/:id"
-						afterCreateOrganizationUrl="/org/:id"
-						hidePersonal
-						afterLeaveOrganizationUrl="/select-org"
-						appearance={{
-							elements: {
-								avatarBox: {
-									borderRadius: "50%",
+				<div className="ml-auto flex items-center gap-2">
+					<div className="ml-auto hidden items-center gap-x-2 md:flex">
+						<ThemeToggle />
+						<OrganizationSwitcher
+							afterSelectOrganizationUrl="/org/:id"
+							afterCreateOrganizationUrl="/org/:id"
+							hidePersonal
+							afterLeaveOrganizationUrl="/select-org"
+							appearance={{
+								elements: {
+									avatarBox: {
+										borderRadius: "50%",
+									},
+									rootBox: {
+										display: "flex",
+										justifyContent: "center",
+										alignItems: "center",
+									},
 								},
-								rootBox: {
-									display: "flex",
-									justifyContent: "center",
-									alignItems: "center",
-								},
-							},
-						}}
-					/>
-				</div>
-				<div className="ml-auto">
-					<UserButton afterSignOutUrl="/" />
+							}}
+						/>
+					</div>
+
+					<div className="ml-auto">
+						<UserButton afterSignOutUrl="/" />
+					</div>
 				</div>
 			</div>
 		</header>
