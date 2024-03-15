@@ -1,6 +1,4 @@
-import { useTranslations } from "next-intl"
-
-import { Icons } from "@/components/icons"
+import { X } from "lucide-react"
 
 interface FormErrorsProps {
 	id: string
@@ -8,8 +6,6 @@ interface FormErrorsProps {
 }
 
 export const FormErrors = ({ id, errors }: FormErrorsProps) => {
-	const t = useTranslations("form")
-
 	if (!errors) {
 		return null
 	}
@@ -25,8 +21,8 @@ export const FormErrors = ({ id, errors }: FormErrorsProps) => {
 					key={id}
 					className="flex items-center gap-x-1 rounded-sm border border-destructive/30 bg-destructive/10 p-1.5 font-medium"
 				>
+					<X className="size-4" />
 					{error}
-					<Icons.xCircle className="h-3.5 w-3.5" />
 				</div>
 			))}
 		</div>
