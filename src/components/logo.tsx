@@ -1,5 +1,6 @@
+import Link from "next/link"
+
 import { env } from "@/lib/env.mjs"
-import { Link } from "@/lib/navigation"
 
 interface LogoProps {
 	className?: string

@@ -1,25 +1,12 @@
-import { getTranslations } from "next-intl/server"
-import { unstable_setRequestLocale } from "next-intl/server"
-
+import Link from "next/link"
 import { MarketingFooter } from "./_components/footer"
 import { MarketingNavbar } from "./_components/navbar"
 import { Icons } from "@/components/icons"
 import { Button } from "@/components/ui/button"
 
 import { env } from "@/lib/env.mjs"
-import { Link } from "@/lib/navigation"
 
-interface MarketingPageProps {
-	params: {
-		locale: string
-	}
-}
-
-const MarketingPage = async ({ params: { locale } }: MarketingPageProps) => {
-	unstable_setRequestLocale(locale)
-
-	const translate = await getTranslations("marketing")
-
+const MarketingPage = async () => {
 	return (
 		<>
 			<MarketingNavbar />
@@ -29,28 +16,28 @@ const MarketingPage = async ({ params: { locale } }: MarketingPageProps) => {
 
 				<div className="container flex w-fit flex-col items-center">
 					<span className="mb-2 flex w-fit items-center gap-2 rounded-full bg-accent p-2 text-center font-poppins text-sm font-semibold uppercase tracking-tighter text-accent-foreground shadow-sm md:p-4 md:text-lg dark:bg-muted dark:text-accent">
-						<Icons.medal /> {translate("medal")}
+						<Icons.medal /> Medal
 					</span>
 
 					<div className="my-4 flex flex-col items-center space-y-4 font-calSans ">
 						<h1 className="text text-balance text-center text-4xl md:text-6xl">
-							{env.NEXT_PUBLIC_APP_NAME} {translate("helps-team")}
+							{env.NEXT_PUBLIC_APP_NAME} Helps Team
 						</h1>
 
 						<span className="rounded-md bg-gradient-to-r from-fuchsia-600 to-pink-600 px-4 pb-4 pt-2 text-4xl text-white md:text-6xl">
-							{translate("work-forward")}
+							work forward
 						</span>
 					</div>
 
 					<p className="mx-auto mt-2 max-w-md text-balance text-center text-sm text-foreground/50 md:max-w-2xl md:text-xl">
-						{translate("description")} {env.NEXT_PUBLIC_APP_NAME}.
+						description {env.NEXT_PUBLIC_APP_NAME}.
 					</p>
 
 					<Button
 						size="lg"
 						className="relative z-50 mt-6 bg-foreground text-background hover:bg-foreground/90"
 					>
-						<Link href="/sign-up">{translate("start-now-button")}</Link>
+						<Link href="/sign-up">Start now</Link>
 					</Button>
 				</div>
 			</main>

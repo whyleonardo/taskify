@@ -1,5 +1,6 @@
 "use client"
 
+import { useRouter } from "next/navigation"
 import { ElementRef, useRef } from "react"
 
 import { Icons } from "@/components/icons"
@@ -17,7 +18,6 @@ import { FormSubmit } from "./form-submit"
 
 import { createBoard } from "@/actions/create-board"
 import { useAction } from "@/hooks/use-action"
-import { useRouter } from "@/lib/navigation"
 import { toast } from "sonner"
 
 interface FormPopoverProps {

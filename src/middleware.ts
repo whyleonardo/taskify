@@ -1,47 +1,32 @@
-import createMiddleware from "next-intl/middleware"
+import { NextResponse } from "next/server"
 
-import { defaultLocale, locales, localePrefix } from "@/constants/locales"
 import { authMiddleware, redirectToSignIn } from "@clerk/nextjs"
 
-const intlMiddleware = createMiddleware({
-	locales,
-	localePrefix,
-	localeDetection: true,
-	defaultLocale,
-})
-
 export default authMiddleware({
-	beforeAuth(request) {
-		return intlMiddleware(request)
-	},
+	publicRoutes: ["/"],
 	afterAuth(auth, req) {
-		const response = intlMiddleware(req)
-		const actualLocale = req.cookies.get("NEXT_LOCALE")?.value
-
 		if (auth.userId && auth.isPublicRoute) {
-			let path = `/${actualLocale}/select-org`
+			let path = "/select-org"
 
-			const selectOrgUrl = new URL(path, req.url)
+			if (auth.orgId) {
+				path = `/org/${auth.orgId}`
+			}
 
-			response.headers.set("x-middleware-rewrite", selectOrgUrl.toString())
-
-			return response
+			const orgSelection = new URL(path, req.url)
+			return NextResponse.redirect(orgSelection)
 		}
 
 		if (!auth.userId && !auth.isPublicRoute) {
 			return redirectToSignIn({ returnBackUrl: req.url })
 		}
-	},
 
-	publicRoutes: ["/", "/sign-in", "/sign-up"],
+		if (auth.userId && !auth.orgId && req.nextUrl.pathname !== "/select-org") {
+			const orgSelection = new URL("/select-org", req.url)
+			return NextResponse.redirect(orgSelection)
+		}
+	},
 })
 
 export const config = {
-	// Match only internationalized pathnames
-	matcher: [
-		"/",
-		"/(en|br)/:path*",
-		"/((?!.+\\.[\\w]+$|_next).*)",
-		"/(api|trpc)(.*)",
-	],
+	matcher: ["/((?!.+\\.[\\w]+$|_next).*)", "/", "/(api|trpc)(.*)"],
 }

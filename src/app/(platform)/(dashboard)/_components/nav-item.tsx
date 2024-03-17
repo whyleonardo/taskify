@@ -1,7 +1,8 @@
 "use client"
 
 import Image from "next/image"
-import { usePathname, useRouter } from "next/navigation"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 import { Icons } from "@/components/icons"
 import {
@@ -12,7 +13,6 @@ import {
 import { Button } from "@/components/ui/button"
 import { Skeleton } from "@/components/ui/skeleton"
 
-import { Link } from "@/lib/navigation"
 import { cn } from "@/lib/utils"
 
 export type Organization = {

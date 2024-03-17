@@ -1,4 +1,3 @@
-import { getTranslations } from "next-intl/server"
 import { Suspense } from "react"
 
 import { BoardList } from "./_components/board-list"

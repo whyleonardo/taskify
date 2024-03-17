@@ -1,14 +1,14 @@
 "use client"
 
+import Link from "next/link"
+
 import { Icons } from "@/components/icons"
 import { Accordion } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
-import { Separator } from "@/components/ui/separator"
 import { Skeleton } from "@/components/ui/skeleton"
 
 import { NavItem, type Organization } from "./nav-item"
 
-import { Link } from "@/lib/navigation"
 import { useOrganization, useOrganizationList } from "@clerk/nextjs"
 import { useLocalStorage } from "usehooks-ts"
 

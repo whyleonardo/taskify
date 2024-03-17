@@ -1,10 +1,9 @@
-import { notFound } from "next/navigation"
+import { notFound, redirect } from "next/navigation"
 
 import { BoardNavbar } from "./_components/board-navbar"
 
 import { getBoardById } from "@/actions/get-board-by-id"
 import { db } from "@/lib/db"
-import { redirect } from "@/lib/navigation"
 import { auth } from "@clerk/nextjs"
 import { startCase } from "lodash"
 

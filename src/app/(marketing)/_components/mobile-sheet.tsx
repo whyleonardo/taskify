@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server"
+import Link from "next/link"
 
 import { Icons } from "@/components/icons"
 import { Logo } from "@/components/logo"
@@ -9,10 +9,7 @@ import {
 	SheetTrigger,
 } from "@/components/ui/sheet"
 
-import { Link } from "@/lib/navigation"
-
 export const MobileSheet = async () => {
-	const translate = await getTranslations("marketing")
 	return (
 		<Sheet>
 			<SheetTrigger className="md:hidden">
@@ -28,7 +25,7 @@ export const MobileSheet = async () => {
 						className="group flex items-center gap-1 text-xl hover:text-foreground/70 hover:underline"
 						href="/sign-in"
 					>
-						{translate("login-button")}
+						Login Button
 						<Icons.chevronRight className="transition group-hover:translate-x-2" />
 					</Link>
 
@@ -36,7 +33,7 @@ export const MobileSheet = async () => {
 						className="group flex items-center gap-1 text-xl hover:text-foreground/70 hover:underline"
 						href="/sign-up"
 					>
-						{translate("sign-up-button")}
+						Sign up button
 						<Icons.chevronRight className="transition group-hover:translate-x-2" />
 					</Link>
 				</div>

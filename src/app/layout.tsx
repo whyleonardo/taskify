@@ -1,5 +1,4 @@
 import { Metadata, type Viewport } from "next"
-import { NextIntlClientProvider, useMessages } from "next-intl"
 
 import { ScreenSizeIndicator } from "@/components/ScreenSizeIndicator"
 import { Toaster } from "@/components/ui/sonner"
@@ -68,7 +67,6 @@ interface RootLayoutProps {
 }
 
 const RootLayout = ({ children, params: { locale } }: RootLayoutProps) => {
-	const messages = useMessages()
 	return (
 		<html lang={locale} suppressHydrationWarning>
 			<head />
@@ -81,13 +79,11 @@ const RootLayout = ({ children, params: { locale } }: RootLayoutProps) => {
 					fontPoppins,
 				)}
 			>
-				<NextIntlClientProvider messages={messages} locale={locale}>
-					<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-						{children}
-						<Toaster />
-					</ThemeProvider>
-					<ScreenSizeIndicator />
-				</NextIntlClientProvider>
+				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+					{children}
+					<Toaster />
+				</ThemeProvider>
+				<ScreenSizeIndicator />
 			</body>
 		</html>
 	)

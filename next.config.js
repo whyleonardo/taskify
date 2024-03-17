@@ -1,7 +1,6 @@
-const withNextIntl = require("next-intl/plugin")()
-
-module.exports = withNextIntl({
-	reactStrictMode: true,
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+	reactStrictMode: false,
 	images: {
 		remotePatterns: [
 			{
@@ -14,4 +13,6 @@ module.exports = withNextIntl({
 			},
 		],
 	},
-})
+}
+
+module.exports = nextConfig

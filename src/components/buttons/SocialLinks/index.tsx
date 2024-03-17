@@ -1,6 +1,7 @@
+import Link from "next/link"
+
 import { buttonVariants } from "@/components/ui/button"
 
-import { Link } from "@/lib/navigation"
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons"
 
 const Github = () => {

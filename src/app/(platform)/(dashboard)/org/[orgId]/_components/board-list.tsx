@@ -1,10 +1,12 @@
+import Link from "next/link"
+import { redirect } from "next/navigation"
+
 import { FormPopover } from "@/components/form/form-popover"
 import { Hint } from "@/components/hint"
 import { Icons } from "@/components/icons"
 import { Skeleton } from "@/components/ui/skeleton"
 
 import { getBoards } from "@/actions/get-boards"
-import { Link, redirect } from "@/lib/navigation"
 import { auth } from "@clerk/nextjs"
 
 export const BoardList = async () => {
