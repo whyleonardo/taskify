@@ -27,7 +27,7 @@ export const CardModal = () => {
 
 	return (
 		<Dialog open={isOpen} onOpenChange={onClose}>
-			<DialogContent>
+			<DialogContent className="w-11/12 md:w-full">
 				{isCardDataFetching || isCardDataLoading || !cardData ? (
 					<Header.Skeleton />
 				) : (
