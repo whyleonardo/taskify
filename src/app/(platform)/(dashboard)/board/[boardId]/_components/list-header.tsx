@@ -81,7 +81,7 @@ export const ListHeader = ({ data }: ListHeaderProps) => {
 						defaultValue={title}
 						onBlur={onBlur}
 						id="title"
-						className="h-7 w-full truncate rounded-sm border-transparent bg-transparent px-[7px] py-1 text-sm font-medium transition hover:border-input focus:border-input"
+						className="h-7 w-full truncate rounded-sm border-transparent bg-transparent px-[7px] py-1 text-sm font-medium shadow-none transition hover:border-input focus:border-input"
 					/>
 
 					<input hidden id="id" name="id" value={data.id} readOnly />

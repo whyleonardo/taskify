@@ -66,7 +66,7 @@ const BoardTitleForm = ({ board }: BoardTitleFormProps) => {
 					ref={inputRef}
 					onBlur={onBlur}
 					defaultValue={title}
-					className="h-7 border-white bg-transparent px-2 py-1 text-lg font-bold focus-visible:outline-none focus-visible:ring-transparent"
+					className="h-7 border-white bg-transparent px-2 py-1 text-lg font-bold shadow-none focus-visible:outline-none focus-visible:ring-transparent"
 				/>
 			</form>
 		)

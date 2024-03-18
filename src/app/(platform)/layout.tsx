@@ -1,11 +1,21 @@
-import { ClerkProvider } from "@/providers/ClerkProvider"
+import { ModalProvider } from "@/components/modals/card-modal/modal-provider"
+
+import { ClerkProvider } from "@/providers/clerk-provider"
+import { QueryProvider } from "@/providers/query-provider"
 
 interface PlatformLayoutProps {
 	children: React.ReactNode
 }
 
 const PlatformLayout = ({ children }: PlatformLayoutProps) => {
-	return <ClerkProvider>{children}</ClerkProvider>
+	return (
+		<ClerkProvider>
+			<QueryProvider>
+				<ModalProvider />
+				{children}
+			</QueryProvider>
+		</ClerkProvider>
+	)
 }
 
 export default PlatformLayout

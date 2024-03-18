@@ -6,7 +6,7 @@ import { Toaster } from "@/components/ui/sonner"
 import { siteConfig } from "@/config/config"
 import { locales } from "@/constants/locales"
 import { cn } from "@/lib/utils"
-import { ThemeProvider } from "@/providers/ThemeProvider"
+import { ThemeProvider } from "@/providers/theme-provider"
 import { fontCalSans, fontMono, fontPoppins, fontSans } from "@/styles/fonts"
 
 import "@/styles/global.css"
