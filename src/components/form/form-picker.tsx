@@ -13,9 +13,7 @@ import { defaultImages } from "@/constants/images"
 import { unsplash } from "@/lib/unsplash"
 import { cn } from "@/lib/utils"
 import { UnsplashImage } from "@/types/unsplash-image"
-import { Icon } from "@radix-ui/react-select"
 import { toast } from "sonner"
-import { UrlObject } from "url"
 
 interface FormPickerProps {
 	id: string

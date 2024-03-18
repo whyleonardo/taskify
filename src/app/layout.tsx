@@ -1,6 +1,6 @@
 import { Metadata, type Viewport } from "next"
 
-import { ScreenSizeIndicator } from "@/components/ScreenSizeIndicator"
+import { ScreenSizeIndicator } from "@/components/screen-size-indicator"
 import { Toaster } from "@/components/ui/sonner"
 
 import { siteConfig } from "@/config/config"

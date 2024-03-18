@@ -2,12 +2,14 @@
 
 import { revalidatePath } from "next/cache"
 
+import { createAuditLog } from "../create-audit-log"
 import { CopyList } from "./schema"
 import { InputType, ReturnType } from "./types"
 
 import { createSafeAction } from "@/lib/create-safe-action"
 import { db } from "@/lib/db"
 import { auth } from "@clerk/nextjs"
+import { ACTION, ENTITY_TYPE } from "@prisma/client"
 
 const handler = async (data: InputType): Promise<ReturnType> => {
 	const { userId, orgId } = auth()
@@ -71,6 +73,13 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 			include: {
 				cards: true,
 			},
+		})
+
+		await createAuditLog({
+			action: ACTION.CREATE,
+			entityId: list.id,
+			entityTitle: list.title,
+			entityType: ENTITY_TYPE.LIST,
 		})
 	} catch (error) {
 		return {

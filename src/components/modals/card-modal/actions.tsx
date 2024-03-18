@@ -5,8 +5,6 @@ import { useParams } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Skeleton } from "@/components/ui/skeleton"
 
-import { CardModal } from "."
-
 import { copyCard } from "@/actions/copy-card"
 import { deleteCard } from "@/actions/delete-card"
 import { useAction } from "@/hooks/use-action"

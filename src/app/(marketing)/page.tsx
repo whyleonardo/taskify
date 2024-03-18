@@ -1,4 +1,5 @@
 import Link from "next/link"
+
 import { MarketingFooter } from "./_components/footer"
 import { MarketingNavbar } from "./_components/navbar"
 import { Icons } from "@/components/icons"
