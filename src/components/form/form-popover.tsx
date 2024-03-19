@@ -68,7 +68,7 @@ export const FormPopover = ({
 				side={side}
 				align={align}
 				sideOffset={sideOffset}
-				className="w-80 pt-3"
+				className="w-80 pt-3 dark:bg-foreground/5"
 			>
 				<div className="pb-4 text-center text-sm font-medium">Create Board</div>
 
