@@ -1,8 +1,9 @@
-import { checkSubscription } from "@/lib/subscription"
 import { Info } from "../_components/info"
-import { Separator } from "@/components/ui/separator"
 import { SubscriptionButton } from "./_components/subscription-button"
+import { Separator } from "@/components/ui/separator"
+
 import { db } from "@/lib/db"
+import { checkSubscription } from "@/lib/subscription"
 import { auth } from "@clerk/nextjs"
 import { format } from "date-fns"
 
@@ -29,7 +30,7 @@ const BillingPage = async () => {
 			<Info isPro={isPro} />
 			<Separator className="my-2" />
 
-			<div className="w-full p-5 rounded space-y-8 mt-4">
+			<div className="mt-4 w-full space-y-8 rounded p-5">
 				<div>
 					<h2 className="text-lg font-bold">Subscription Plan</h2>
 					<p className="text-sm text-neutral-500 dark:text-muted-foreground">
@@ -42,7 +43,7 @@ const BillingPage = async () => {
 					<SubscriptionButton isPro={isPro} />
 
 					{isPro && (
-						<p className="text-xs text-muted-foreground tracking-tight">
+						<p className="text-xs tracking-tight text-muted-foreground">
 							Your plan renews in:{" "}
 							{format(
 								subscriptionInfo?.stripeCurrentPeriodEnd as Date,

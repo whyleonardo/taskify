@@ -27,7 +27,7 @@ export const DashboardSidebar = ({
 	const { organization: activeOrganization, isLoaded: isLoadedOrg } =
 		useOrganization()
 
-	const { userMemberships, isLoaded: isLoadedOrgList } = useOrganizationList({
+	const { userMemberships } = useOrganizationList({
 		userMemberships: {
 			infinite: true,
 		},

@@ -9,8 +9,8 @@ import { Skeleton } from "@/components/ui/skeleton"
 import { getBoards } from "@/actions/get-boards"
 import { MAX_FREE_BOARDS } from "@/constants/boards"
 import { getAvailableCount } from "@/lib/org-limit"
-import { auth } from "@clerk/nextjs"
 import { checkSubscription } from "@/lib/subscription"
+import { auth } from "@clerk/nextjs"
 
 export const BoardList = async () => {
 	const { orgId } = auth()

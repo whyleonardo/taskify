@@ -3,6 +3,7 @@ import { Suspense } from "react"
 import { Info } from "../_components/info"
 import { ActivityList } from "./_components/activity-list"
 import { Separator } from "@/components/ui/separator"
+
 import { checkSubscription } from "@/lib/subscription"
 
 const ActivityPage = async () => {

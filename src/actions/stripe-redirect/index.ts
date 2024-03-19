@@ -71,7 +71,8 @@ const handler = async (): Promise<ReturnType> => {
 			url = stripeSession.url || ""
 		}
 	} catch (error) {
-		console.log(error)
+		// eslint-disable-next-line no-console
+		console.error(error)
 		return {
 			error: "Something went wrong!",
 		}

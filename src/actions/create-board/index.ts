@@ -9,9 +9,9 @@ import { InputType, ReturnType } from "./types"
 import { createSafeAction } from "@/lib/create-safe-action"
 import { db } from "@/lib/db"
 import { hasAvailableCount, incrementAvailableCount } from "@/lib/org-limit"
+import { checkSubscription } from "@/lib/subscription"
 import { auth } from "@clerk/nextjs"
 import { ACTION, ENTITY_TYPE } from "@prisma/client"
-import { checkSubscription } from "@/lib/subscription"
 
 async function handler(data: InputType): Promise<ReturnType> {
 	const { userId, orgId } = auth()
