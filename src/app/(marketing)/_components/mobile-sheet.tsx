@@ -17,23 +17,23 @@ export const MobileSheet = async () => {
 			</SheetTrigger>
 			<SheetContent className="md:hidden">
 				<SheetHeader className="flex items-start">
-					<Logo className="opacity-30" />
+					<Logo className="opacity-80" />
 				</SheetHeader>
 
 				<div className="mt-8 flex flex-col gap-8">
 					<Link
-						className="group flex items-center gap-1 text-xl hover:text-foreground/70 hover:underline"
+						className="group flex items-center gap-1 text-xl hover:text-foreground/70 hover:underline hover:underline-offset-8"
 						href="/sign-in"
 					>
-						Login Button
+						Login
 						<Icons.chevronRight className="transition group-hover:translate-x-2" />
 					</Link>
 
 					<Link
-						className="group flex items-center gap-1 text-xl hover:text-foreground/70 hover:underline"
+						className="group flex items-center gap-1 text-xl hover:text-foreground/70 hover:underline hover:underline-offset-8"
 						href="/sign-up"
 					>
-						Sign up button
+						Create New Account
 						<Icons.chevronRight className="transition group-hover:translate-x-2" />
 					</Link>
 				</div>

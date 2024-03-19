@@ -13,14 +13,14 @@ export const MarketingNavbar = async () => {
 
 				<nav className="hidden gap-2 md:flex">
 					<Button size="sm" className="font-semibold">
-						<Link href="/sign-in">Login button</Link>
+						<Link href="/sign-in">Login</Link>
 					</Button>
 
 					<Button
 						size="sm"
 						className="bg-foreground font-semibold text-background hover:bg-foreground/90"
 					>
-						<Link href="/sign-up">Signup b</Link>
+						<Link href="/sign-up">Create Free Account</Link>
 					</Button>
 				</nav>
 

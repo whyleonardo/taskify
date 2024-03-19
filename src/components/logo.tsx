@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-import { env } from "@/lib/env.mjs"
+import { cn } from "@/lib/utils"
 
 interface LogoProps {
 	className?: string
@@ -8,8 +8,11 @@ interface LogoProps {
 
 export const Logo = ({ className }: LogoProps) => {
 	return (
-		<Link className={className} href="/">
-			{env.NEXT_PUBLIC_APP_NAME}
+		<Link
+			className={cn("font-black font-mono tracking-tighter", className)}
+			href="/"
+		>
+			Taskify
 		</Link>
 	)
 }

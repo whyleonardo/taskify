@@ -12,7 +12,7 @@ export const DashboardNavbar = async () => {
 	return (
 		<header className="sticky top-0 z-50 flex h-14 w-full items-center bg-muted px-4 shadow">
 			<div className="flex w-full items-center gap-x-2">
-				<Logo className="mr-2 hidden md:flex" />
+				<Logo className="mr-4 hidden transition hover:scale-105 md:flex" />
 				<MobileSidebar />
 				<FormPopover side="bottom" sideOffset={8} align="start">
 					<Button className="hidden items-center gap-x-2 md:flex">
