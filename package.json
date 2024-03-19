@@ -17,7 +17,8 @@
     "db:studio": "prisma studio",
     "db:push": "prisma db push",
     "db:reset": "prisma migrate reset --force",
-    "db:gen": "prisma generate"
+    "db:gen": "prisma generate",
+    "postinstall": "prisma migrate deploy && prisma generate && next build"
   },
   "dependencies": {
     "@clerk/localizations": "^1.26.13",
