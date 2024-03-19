@@ -1,11 +1,9 @@
-
 import { headers } from "next/headers"
 import { NextResponse } from "next/server"
 
 import { db } from "@/lib/db"
 import { env } from "@/lib/env.mjs"
 import { stripe } from "@/lib/stripe"
-import { error } from "console"
 import Stripe from "stripe"
 
 export async function POST(req: Request) {
