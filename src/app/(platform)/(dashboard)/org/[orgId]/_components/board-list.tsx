@@ -58,15 +58,18 @@ export const BoardList = async () => {
 								? "Unlimited"
 								: `${MAX_FREE_BOARDS - availableCount} remaining`}
 						</span>
-						<Hint
-							sideOffset={65}
-							side="bottom"
-							description={`
+
+						{!isPro && (
+							<Hint
+								sideOffset={65}
+								side="bottom"
+								description={`
 							Free Workspaces can have up to 5 open boards. For unlimited boards, upgrade this workspace.
 							`}
-						>
-							<Icons.help className="absolute bottom-2 right-2 h-4 w-4 transition-transform hover:scale-110" />
-						</Hint>
+							>
+								<Icons.help className="absolute bottom-2 right-2 h-4 w-4 transition-transform hover:scale-110" />
+							</Hint>
+						)}
 					</div>
 				</FormPopover>
 			</div>
