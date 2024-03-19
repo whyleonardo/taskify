@@ -1,7 +1,7 @@
 import { env } from "@/lib/env.mjs"
 
 export const siteConfig = {
-	name: env.NEXT_PUBLIC_APP_NAME,
+	name: "Taskify",
 	authors: [
 		{
 			name: "whyleonardo",
@@ -10,11 +10,12 @@ export const siteConfig = {
 	],
 	url: env.NEXT_PUBLIC_SITE_BASE_URL,
 	ogImage: "",
-	description: `✨ Collaborate, manage projects, and reach new productivity peaks. From high rises to the home office, the way your team works is unique - accomplish it all with ${env.NEXT_PUBLIC_APP_NAME} ✨`,
+	description:
+		"✨ Collaborate, manage projects, and reach new productivity peaks. From high rises to the home office, the way your team works is unique - accomplish it all with Taskify ✨",
 	links: {
 		github: env.NEXT_PUBLIC_SITE_BASE_URL,
 		twitter: "",
-		linkedin: "",
+		linkedin: "https://linkedin.com/in/christianlsb",
 	},
 }
 

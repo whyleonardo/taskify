@@ -25,13 +25,13 @@ export const metadata: Metadata = {
 		template: `%s - ${siteConfig.name}`,
 	},
 	description: siteConfig.description,
-	keywords: ["Next.js", "React", "Tailwind CSS", "Radix UI", "shadcn/ui"],
+	keywords: ["Trello", "Productivity", "Management", "Tasks", "Workflow"],
 	authors: siteConfig.authors,
 	creator: "whyleonardo",
 	metadataBase: new URL(siteConfig.url),
 	openGraph: {
 		type: "website",
-		locale: "pt_BR",
+		locale: "en_US",
 		url: siteConfig.url,
 		title: siteConfig.name,
 		description: siteConfig.description,
@@ -53,9 +53,7 @@ export const metadata: Metadata = {
 		creator: "@christianlsb0",
 	},
 	icons: {
-		icon: "/favicon.ico",
-		shortcut: "/favicon-16x16.png",
-		apple: "/apple-touch-icon.png",
+		icon: "/favicon.png",
 	},
 }
 
