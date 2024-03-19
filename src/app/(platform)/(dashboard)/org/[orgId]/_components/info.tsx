@@ -7,7 +7,11 @@ import { Skeleton } from "@/components/ui/skeleton"
 
 import { useOrganization } from "@clerk/nextjs"
 
-export const Info = () => {
+interface InfoProps {
+	isPro: boolean
+}
+
+export const Info = ({ isPro }: InfoProps) => {
 	const { organization, isLoaded } = useOrganization()
 
 	if (!isLoaded) {
@@ -26,9 +30,9 @@ export const Info = () => {
 			</div>
 			<div className="space-y-1 ">
 				<p className="text-xl font-semibold">{organization?.name}</p>
-				<div className="flex items-center text-xs text-muted-foreground">
-					<Icons.creditCard className="mr-1 h-3 w-3" />
-					Free
+				<div className="flex items-center text-sm text-muted-foreground">
+					<Icons.creditCard className="mr-1 size-4" />
+					{isPro ? "Pro" : "Free"}
 				</div>
 			</div>
 		</div>

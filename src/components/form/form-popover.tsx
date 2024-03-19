@@ -18,6 +18,7 @@ import { FormSubmit } from "./form-submit"
 
 import { createBoard } from "@/actions/create-board"
 import { useAction } from "@/hooks/use-action"
+import { useProModal } from "@/hooks/use-pro-modal"
 import { toast } from "sonner"
 
 interface FormPopoverProps {
@@ -33,21 +34,19 @@ export const FormPopover = ({
 	side = "bottom",
 	sideOffset,
 }: FormPopoverProps) => {
+	const proModal = useProModal()
 	const closeRef = useRef<ElementRef<"button">>(null)
 	const router = useRouter()
 
 	const { fieldErrors, execute } = useAction(createBoard, {
 		onComplete: () => {},
 		onError: (error) => {
-			toast.error(error, {
-				duration: 1500,
-			})
+			toast.error(error)
+			proModal.onOpen()
 		},
 		onSuccess: (data) => {
 			const { title, id } = data
-			toast.success(`The board ${title} was created`, {
-				duration: 1500,
-			})
+			toast.success(`The board ${title} was created`)
 
 			closeRef.current?.click()
 			router.push(`/board/${id}`)
@@ -68,7 +67,7 @@ export const FormPopover = ({
 				side={side}
 				align={align}
 				sideOffset={sideOffset}
-				className="w-80 pt-3 dark:bg-foreground/5"
+				className="w-80 pt-3 dark:bg-neutral-900"
 			>
 				<div className="pb-4 text-center text-sm font-medium">Create Board</div>
 

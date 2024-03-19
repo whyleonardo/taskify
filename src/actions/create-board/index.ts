@@ -8,8 +8,10 @@ import { InputType, ReturnType } from "./types"
 
 import { createSafeAction } from "@/lib/create-safe-action"
 import { db } from "@/lib/db"
+import { hasAvailableCount, incrementAvailableCount } from "@/lib/org-limit"
 import { auth } from "@clerk/nextjs"
 import { ACTION, ENTITY_TYPE } from "@prisma/client"
+import { checkSubscription } from "@/lib/subscription"
 
 async function handler(data: InputType): Promise<ReturnType> {
 	const { userId, orgId } = auth()
@@ -17,6 +19,16 @@ async function handler(data: InputType): Promise<ReturnType> {
 	if (!userId || !orgId) {
 		return {
 			error: "Unauthorized",
+		}
+	}
+
+	const canCreate = await hasAvailableCount()
+	const isPro = await checkSubscription()
+
+	if (!canCreate && !isPro) {
+		return {
+			error:
+				"You have reached your limit of free board. Please upgrade to create more.",
 		}
 	}
 
@@ -51,6 +63,10 @@ async function handler(data: InputType): Promise<ReturnType> {
 				orgId,
 			},
 		})
+
+		if (!isPro) {
+			await incrementAvailableCount()
+		}
 
 		await createAuditLog({
 			action: ACTION.CREATE,

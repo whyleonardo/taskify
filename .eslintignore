@@ -7,5 +7,5 @@ node_modules
 *.config.js
 *.config.ts
 *.config.cjs
-
+.prisma
 

@@ -4,7 +4,6 @@ import { ScreenSizeIndicator } from "@/components/screen-size-indicator"
 import { Toaster } from "@/components/ui/sonner"
 
 import { siteConfig } from "@/config/config"
-import { locales } from "@/constants/locales"
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/providers/theme-provider"
 import { fontCalSans, fontMono, fontPoppins, fontSans } from "@/styles/fonts"
@@ -85,10 +84,6 @@ const RootLayout = ({ children, params: { locale } }: RootLayoutProps) => {
 			</body>
 		</html>
 	)
-}
-
-export function generateStaticParams() {
-	return locales.map((locale) => ({ locale }))
 }
 
 export default RootLayout

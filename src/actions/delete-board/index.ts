@@ -9,6 +9,7 @@ import { InputType, ReturnType } from "./types"
 
 import { createSafeAction } from "@/lib/create-safe-action"
 import { db } from "@/lib/db"
+import { decreaseAvailableCount } from "@/lib/org-limit"
 import { auth } from "@clerk/nextjs"
 import { ACTION, ENTITY_TYPE } from "@prisma/client"
 
@@ -33,6 +34,8 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 				id,
 			},
 		})
+
+		await decreaseAvailableCount()
 
 		await createAuditLog({
 			action: ACTION.DELETE,
