@@ -44,7 +44,7 @@ const BillingPage = async () => {
 
 					{isPro && (
 						<p className="text-xs tracking-tight text-muted-foreground">
-							Your plan renews in:{" "}
+							Your plan renews in{" "}
 							{format(
 								subscriptionInfo?.stripeCurrentPeriodEnd as Date,
 								"MMM d, yyyy",
@@ -53,24 +53,6 @@ const BillingPage = async () => {
 					)}
 				</div>
 			</div>
-
-			{/* {isPro ? (
-				<p className="font-medium tracking-tighter mb-2">
-					Your plan expires in:{" "}
-					<span>
-						{format(
-							subscriptionInfo?.stripeCurrentPeriodEnd as Date,
-							"MMM d, yyyy 'at' h:mm a",
-						)}
-					</span>
-				</p>
-			) : (
-				<p className="mb-2">
-					This organization don't have a <strong>Pro</strong> subscription
-				</p>
-			)}
-
-			*/}
 		</div>
 	)
 }
