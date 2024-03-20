@@ -39,7 +39,7 @@ const BillingPage = async () => {
 					</p>
 				</div>
 
-				<div className="flex w-full justify-between">
+				<div className="flex w-full justify-between items-center">
 					<SubscriptionButton isPro={isPro} />
 
 					{isPro && (
